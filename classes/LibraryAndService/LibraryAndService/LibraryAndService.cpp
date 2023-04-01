@@ -14,10 +14,10 @@ private:
 	string Number_phome;
 	string Name_library;
 public:
-	int setNumber_phome(string saLibraly) {
+	int setNumber_phome(string regLibraly) {
 		int error_current{ 0 };
 		smatch m;
-		if (regex_match(saLibraly, m, regex("^[1-9][0-9]{4}-[0-9]{2}$"))) {
+		if (regex_match(regLibraly, m, regex("^[1-9][0-9]{4}-[0-9]{2}$"))) {
 			error_current = 0;
 		}
 		else {
@@ -47,10 +47,10 @@ public:
 	string getName_servise() {
 		return Name_servise;
 	};
-	int setPrice(string saPrise) {
+	int setPrice(string regPrise) {
 		int error_current1{ 0 };
 		smatch m;
-		if (regex_search(saPrise, m, regex("^[1-9][0-9]*$"))) {
+		if (regex_search(regPrise, m, regex("^[1-9][0-9]*$"))) {
 			error_current1 = 0;
 		}
 		else {
